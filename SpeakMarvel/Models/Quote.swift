@@ -44,9 +44,9 @@ class Quote{
         return Difficulty.HARD
     }
     //returns # of easy, then medium then hard
-    func numberOfWordsInDifferentCategories(quote:String) -> [Int]
+    func numberOfWordsInDifferentCategories(quote:String) -> [Float]
     {
-        var numberOfWordsOfEachDifficulty = [Int] ()
+        var numberOfWordsOfEachDifficulty = [Float] ()
         numberOfWordsOfEachDifficulty[0] = 0 //easy
         numberOfWordsOfEachDifficulty[1] = 0 //hard
         
@@ -79,7 +79,15 @@ class Quote{
     func calculateDifficulty(quote: String) -> Float
     {
         var rawScore: Float
-        rawScore = 0
+        let difficultiesNumber = numberOfWordsInDifferentCategories(quote: quote)
+        
+        rawScore = 0.1579*(100*(difficultiesNumber[1]/(difficultiesNumber[1]+difficultiesNumber[0])))+0.0496*(difficultiesNumber[1]+difficultiesNumber[0])
+        
+        if difficultiesNumber[1]/(difficultiesNumber[1] + difficultiesNumber[0]) > 0.05
+        {
+            rawScore = rawScore + 3.6365
+        }
+        
         return rawScore
     }
     
