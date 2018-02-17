@@ -173,6 +173,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -199,8 +201,25 @@ SWIFT_CLASS("_TtC11SpeakMarvel11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
+@class UICollectionView;
+@class UICollectionViewLayoutAttributes;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC11SpeakMarvel25CardsCollectionViewLayout")
+@interface CardsCollectionViewLayout : UICollectionViewLayout
+@property (nonatomic, readonly, strong) UICollectionView * _Nonnull collectionView;
+@property (nonatomic, readonly) CGSize collectionViewContentSize;
+- (void)prepareLayout;
+- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+@class NSBundle;
 
 SWIFT_CLASS("_TtC11SpeakMarvel14ViewController")
 @interface ViewController : UIViewController
