@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Quote{
     var quote: String
     var difficulty: Float
@@ -20,36 +21,60 @@ class Quote{
         self.quote = quote
         self.imageURL = imageURL
     }
-    
+   
     enum Difficulty
     {
-        case EASY, MEDIUM, HARD
+        case EASY, HARD
     }
     
+    func checkIfWordIsCommon(word: String) -> Bool
+    {
+        return true;
+    }
     
     func getDifficulty(word: String) -> Difficulty
     {
-        if word.count < 6 {
+        let isWordCommon = checkIfWordIsCommon(word: word)
+        
+        if word.count < 5 || isWordCommon
+        {
             return Difficulty.EASY
         }
-        else if word.contains("qu") || word.contains("rct")
+        
+        return Difficulty.HARD
+    }
+    //returns # of easy, then medium then hard
+    func numberOfWordsInDifferentCategories(quote:String) -> [Int]
+    {
+        var numberOfWordsOfEachDifficulty = [Int] ()
+        numberOfWordsOfEachDifficulty[0] = 0 //easy
+        numberOfWordsOfEachDifficulty[1] = 0 //hard
+        
+        var newQuote = quote.replacingOccurrences(of: ",", with: " ")
+        newQuote = newQuote.replacingOccurrences(of: ".", with: " ")
+        newQuote = newQuote.replacingOccurrences(of: "!", with: " ")
+        newQuote = newQuote.replacingOccurrences(of: ",", with: " ")
+        newQuote = newQuote.replacingOccurrences(of: "/", with: " ")
+        newQuote = newQuote.replacingOccurrences(of: "(", with: " ")
+        newQuote = newQuote.replacingOccurrences(of: ")", with: " ")
+        
+        let wordsInQuote = quote.split(separator:" ")
+        
+        for thing in wordsInQuote
         {
-            
+            if(thing.lowercased() == "blah") //easy
+            {
+                numberOfWordsOfEachDifficulty[0] = numberOfWordsOfEachDifficulty[0] + 1
+                
+            }
+            else //hardSM
+            {
+                numberOfWordsOfEachDifficulty[1] = numberOfWordsOfEachDifficulty[1] + 1
+            }
         }
-        return Difficulty.MEDIUM
+        return numberOfWordsOfEachDifficulty
     }
     
-    func numberOfMediumWords(quote:String) -> Int
-    {
-        
-        return 0
-    }
-    
-    func numberOfDifficultWords(quote: String) -> Int
-    {
-        
-        return 0;
-    }
     
     func calculateDifficulty(quote: String) -> Float
     {
