@@ -1,3 +1,39 @@
 starting-account-qmybhcqaqnnh
 
 
+quote_1 = {
+  quote: "No",
+  who: "Rosa Parks",
+  image: "pics.com/rp.png"
+}
+
+
+
+Marvel API
+public:
+c85fb470f52c2f0fadc9cf7b2383414d
+private:
+da0da9c53718269ad9056277e226a9937c0c23e9
+
+
+marvel wrapper response format:
+{
+  data: [
+    {
+      id: 43495,
+      digitalId: 28150,
+      ...
+    },
+    {
+      id: 42566,
+      digitalId: 0,
+      ...
+    }
+  ],
+  meta: {
+    offset: 0,
+    limit: 20,
+    total: 2576,
+    count: 20
+  }
+}
