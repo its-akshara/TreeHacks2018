@@ -21,7 +21,17 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!').end();
+  res.status(200).send('Marvelous!').end();
+});
+
+var testResponse = {
+  quote: "Hello!",
+  character: "Tony Stark",
+  image: "https://nerdist.com/wp-content/uploads/2016/04/Iron-Man.jpg"
+}
+
+app.get('/cards', (req, res) => {
+  res.status(200).send(testResponse).end();
 });
 
 // Start the server
