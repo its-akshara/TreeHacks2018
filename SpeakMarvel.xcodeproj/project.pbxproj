@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D7CF37448D04422C00AAC22 /* Pods_SpeakMarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2960D169B4E3909DA61A9FB1 /* Pods_SpeakMarvel.framework */; };
 		662EBF412037FE29007B4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EBF402037FE29007B4CD2 /* AppDelegate.swift */; };
 		662EBF432037FE29007B4CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EBF422037FE29007B4CD2 /* ViewController.swift */; };
 		662EBF462037FE29007B4CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662EBF442037FE29007B4CD2 /* Main.storyboard */; };
 		662EBF482037FE29007B4CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662EBF472037FE29007B4CD2 /* Assets.xcassets */; };
 		662EBF4B2037FE29007B4CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662EBF492037FE29007B4CD2 /* LaunchScreen.storyboard */; };
+		846043E82038166F008DC98A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846043E72038166F008DC98A /* Quote.swift */; };
+		846043EA20381699008DC98A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846043E920381699008DC98A /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2960D169B4E3909DA61A9FB1 /* Pods_SpeakMarvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakMarvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31CBB50E1E262EF094F9CD6C /* Pods-SpeakMarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakMarvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel.release.xcconfig"; sourceTree = "<group>"; };
 		662EBF3D2037FE29007B4CD2 /* SpeakMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662EBF402037FE29007B4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662EBF422037FE29007B4CD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		662EBF472037FE29007B4CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662EBF4A2037FE29007B4CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662EBF4C2037FE29007B4CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		741F17BF94C3445F91121010 /* Pods-SpeakMarvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakMarvel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel.debug.xcconfig"; sourceTree = "<group>"; };
+		846043E72038166F008DC98A /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		846043E920381699008DC98A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7CF37448D04422C00AAC22 /* Pods_SpeakMarvel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				662EBF3F2037FE29007B4CD2 /* SpeakMarvel */,
 				662EBF3E2037FE29007B4CD2 /* Products */,
+				AE3DD2D6955DABAF58F677F1 /* Pods */,
+				9E5B4B02A038AB1742B6B070 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +65,7 @@
 		662EBF3F2037FE29007B4CD2 /* SpeakMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				846043E620381659008DC98A /* Models */,
 				662EBF402037FE29007B4CD2 /* AppDelegate.swift */,
 				662EBF422037FE29007B4CD2 /* ViewController.swift */,
 				662EBF442037FE29007B4CD2 /* Main.storyboard */,
@@ -64,6 +76,32 @@
 			path = SpeakMarvel;
 			sourceTree = "<group>";
 		};
+		846043E620381659008DC98A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				846043E72038166F008DC98A /* Quote.swift */,
+				846043E920381699008DC98A /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9E5B4B02A038AB1742B6B070 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2960D169B4E3909DA61A9FB1 /* Pods_SpeakMarvel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE3DD2D6955DABAF58F677F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				741F17BF94C3445F91121010 /* Pods-SpeakMarvel.debug.xcconfig */,
+				31CBB50E1E262EF094F9CD6C /* Pods-SpeakMarvel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 662EBF4F2037FE29007B4CD2 /* Build configuration list for PBXNativeTarget "SpeakMarvel" */;
 			buildPhases = (
+				3473D0200E1C1E397F450257 /* [CP] Check Pods Manifest.lock */,
 				662EBF392037FE29007B4CD2 /* Sources */,
 				662EBF3A2037FE29007B4CD2 /* Frameworks */,
 				662EBF3B2037FE29007B4CD2 /* Resources */,
+				D201A294117BA73EC4E8A81D /* [CP] Embed Pods Frameworks */,
+				BF6DFB5FED3C83C73BCC47CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +172,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3473D0200E1C1E397F450257 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeakMarvel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF6DFB5FED3C83C73BCC47CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D201A294117BA73EC4E8A81D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CardsLayout/CardsLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardsLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		662EBF392037FE29007B4CD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846043EA20381699008DC98A /* Player.swift in Sources */,
 				662EBF432037FE29007B4CD2 /* ViewController.swift in Sources */,
+				846043E82038166F008DC98A /* Quote.swift in Sources */,
 				662EBF412037FE29007B4CD2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,10 +369,11 @@
 		};
 		662EBF502037FE29007B4CD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 741F17BF94C3445F91121010 /* Pods-SpeakMarvel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DDCRUXY46;
+				DEVELOPMENT_TEAM = 928WARTLH8;
 				INFOPLIST_FILE = SpeakMarvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.SpeakMarvel;
@@ -287,10 +385,11 @@
 		};
 		662EBF512037FE29007B4CD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31CBB50E1E262EF094F9CD6C /* Pods-SpeakMarvel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DDCRUXY46;
+				DEVELOPMENT_TEAM = 928WARTLH8;
 				INFOPLIST_FILE = SpeakMarvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.SpeakMarvel;
