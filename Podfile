@@ -3,6 +3,6 @@ use_frameworks!
 
 target 'SpeakMarvel' do
   # Pods for SpeakMarvel
-  pod 'CardsLayout'
+  pod 'KSSwipeStack'
 
 end

@@ -1,12 +1,15 @@
 PODS:
-  - CardsLayout (0.0.1)
+  - KSSwipeStack (0.4.2):
+    - RxSwift
+  - RxSwift (4.1.2)
 
 DEPENDENCIES:
-  - CardsLayout
+  - KSSwipeStack
 
 SPEC CHECKSUMS:
-  CardsLayout: ceeb8f9c26319b47a2f0995ea4590cf7ba881462
+  KSSwipeStack: 5ff89a5c44d5ddd361d32a63d1ad2a70d5f1cf59
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: ecb4c0106192ef41716ad926962d6948fc23e6ca
+PODFILE CHECKSUM: 776e82d091f02edddb5a013207146451d3c97121
 
 COCOAPODS: 1.4.0

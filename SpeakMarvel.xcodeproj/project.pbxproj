@@ -15,8 +15,8 @@
 		662EBF4B2037FE29007B4CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662EBF492037FE29007B4CD2 /* LaunchScreen.storyboard */; };
 		846043E82038166F008DC98A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846043E72038166F008DC98A /* Quote.swift */; };
 		846043EA20381699008DC98A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846043E920381699008DC98A /* Player.swift */; };
-		846043EC203819C9008DC98A /* CardsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846043EB203819C9008DC98A /* CardsCollectionViewLayout.swift */; };
 		846043F020381BC8008DC98A /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846043EF20381BC8008DC98A /* ButtonViewController.swift */; };
+		847866562038BFC700B99B01 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847866552038BFC600B99B01 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		741F17BF94C3445F91121010 /* Pods-SpeakMarvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakMarvel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel.debug.xcconfig"; sourceTree = "<group>"; };
 		846043E72038166F008DC98A /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		846043E920381699008DC98A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		846043EB203819C9008DC98A /* CardsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewLayout.swift; sourceTree = "<group>"; };
 		846043EF20381BC8008DC98A /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		847866552038BFC600B99B01 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 				662EBF472037FE29007B4CD2 /* Assets.xcassets */,
 				662EBF492037FE29007B4CD2 /* LaunchScreen.storyboard */,
 				662EBF4C2037FE29007B4CD2 /* Info.plist */,
-				846043EB203819C9008DC98A /* CardsCollectionViewLayout.swift */,
 			);
 			path = SpeakMarvel;
 			sourceTree = "<group>";
@@ -94,6 +93,7 @@
 		846043ED20381B7E008DC98A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				847866552038BFC600B99B01 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,11 +235,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CardsLayout/CardsLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/KSSwipeStack/KSSwipeStack.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardsLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSSwipeStack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,9 +257,9 @@
 			files = (
 				846043EA20381699008DC98A /* Player.swift in Sources */,
 				662EBF432037FE29007B4CD2 /* CardViewController.swift in Sources */,
-				846043EC203819C9008DC98A /* CardsCollectionViewLayout.swift in Sources */,
 				846043E82038166F008DC98A /* Quote.swift in Sources */,
 				846043F020381BC8008DC98A /* ButtonViewController.swift in Sources */,
+				847866562038BFC700B99B01 /* CardView.swift in Sources */,
 				662EBF412037FE29007B4CD2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
