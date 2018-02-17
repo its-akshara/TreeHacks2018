@@ -118,7 +118,7 @@ class Quote{
     
     init(quote: String, character: String, imageURL: URL){
         self.character = character
-        self.difficulty = 0
+        self.difficulty = calculateDifficulty(quote: quote)
         self.quote = quote
         self.imageURL = imageURL
         self.difficulty = calculateDifficulty(quote: quote)
