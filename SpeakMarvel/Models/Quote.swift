@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 
 class Quote{
     var quote: String
@@ -29,7 +29,32 @@ class Quote{
     
     func checkIfWordIsCommon(word: String) -> Bool
     {
-        return true;
+//        if let path = Bundle.mainBundle.path(forResource: "data", ofType: "json") {
+//            if let data = NSData(contentsOfFile: "dalechellwordlist") {
+//                let json = JSON(data: data, options: JSONSerialization.ReadingOptions.AllowFragments, error: nil)
+//
+//            }
+//        }
+//        let data = NSData(contentsOfFile: "dalechellwordlist.json")
+//        if let jsonData = data {
+//
+//        }
+        if let path = Bundle.main.path(forResource: "dalechellwordlist", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj = try JSON(data: data)
+                if(jsonObj.dictionary![word]?.exists())!
+                {
+                    return true
+                }
+            } catch let error {
+                print("parse error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
+        
+        return false;
     }
     
     func getDifficulty(word: String) -> Difficulty
@@ -62,7 +87,7 @@ class Quote{
         
         for thing in wordsInQuote
         {
-            if(thing.lowercased() == "blah") //easy
+            if(getDifficulty(word: thing.lowercased())==Difficulty.EASY) //easy
             {
                 numberOfWordsOfEachDifficulty[0] = numberOfWordsOfEachDifficulty[0] + 1
                 
