@@ -7,13 +7,33 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class CardsViewController: UIViewController {
 
+    @IBOutlet weak var displayQuote: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        Alamofire.request("http://api.androidhive.info/contacts/").responseJSON { (responseData) -> Void in
+//            if((responseData.result.value) != nil) {
+//                let swiftyJsonVar = JSON(responseData.result.value!)
+//                print(swiftyJsonVar)
+//            }
+//        }
+        
+        Alamofire.request("http://marvelous-195508.appspot.com/cards", method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                self.displayQuote.text = json["quote"].string
+                print("This is the quote: \(json["quote"] )")
+                print("JSON: \(json)")
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
