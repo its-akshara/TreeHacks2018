@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class Player{
+    var Score: Int
+    var difficultyRange: Int
+    var runningCorrect: Int
+    
+    init(Score:Int, difficultyRange:Int, runningCorrect: Int)
+    {
+        self.difficultyRange=difficultyRange
+        self.Score=Score
+        self.runningCorrect=runningCorrect
+    }
+    
+    
+}
+
