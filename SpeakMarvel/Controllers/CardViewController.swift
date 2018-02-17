@@ -14,8 +14,9 @@ import RxSwift
 class CardViewController: UIViewController {
     
     @IBOutlet var swipeView: SwipeView!
-    private var disposableBag = DisposeBag() // for error handling later
  
+    private var disposableBag = DisposeBag() // for error handling later
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
