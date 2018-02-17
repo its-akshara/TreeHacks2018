@@ -33,12 +33,12 @@ open class CardsCollectionViewLayout: UICollectionViewLayout {
         return super.collectionView!
     }
     
-    override open var collectionViewContentSize: CGSize {
-        let itemsCount = CGFloat(collectionView.numberOfItems(inSection: 0))
-        return CGSize(width: collectionView.bounds.width * itemsCount,
-                      height: collectionView.bounds.height)
-    }
-    
+//    override open var collectionViewContentSize: CGSize {
+//        let itemsCount = CGFloat(collectionView.numberOfItems(inSection: 0))
+//        return CGSize(width: collectionView.bounds.width * itemsCount,
+//                      height: collectionView.bounds.height)
+//    }
+//    
     override open func prepare() {
         super.prepare()
         assert(collectionView.numberOfSections == 1, "Multiple sections aren't supported!")

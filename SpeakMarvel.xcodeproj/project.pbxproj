@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D7CF37448D04422C00AAC22 /* Pods_SpeakMarvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2960D169B4E3909DA61A9FB1 /* Pods_SpeakMarvel.framework */; };
 		662EBF412037FE29007B4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EBF402037FE29007B4CD2 /* AppDelegate.swift */; };
-		662EBF432037FE29007B4CD2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EBF422037FE29007B4CD2 /* MainViewController.swift */; };
+		662EBF432037FE29007B4CD2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EBF422037FE29007B4CD2 /* CardViewController.swift */; };
 		662EBF462037FE29007B4CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662EBF442037FE29007B4CD2 /* Main.storyboard */; };
 		662EBF482037FE29007B4CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662EBF472037FE29007B4CD2 /* Assets.xcassets */; };
 		662EBF4B2037FE29007B4CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662EBF492037FE29007B4CD2 /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		31CBB50E1E262EF094F9CD6C /* Pods-SpeakMarvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakMarvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakMarvel/Pods-SpeakMarvel.release.xcconfig"; sourceTree = "<group>"; };
 		662EBF3D2037FE29007B4CD2 /* SpeakMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662EBF402037FE29007B4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		662EBF422037FE29007B4CD2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		662EBF422037FE29007B4CD2 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		662EBF452037FE29007B4CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		662EBF472037FE29007B4CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662EBF4A2037FE29007B4CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		846043EE20381B85008DC98A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				662EBF422037FE29007B4CD2 /* MainViewController.swift */,
+				662EBF422037FE29007B4CD2 /* CardViewController.swift */,
 				846043EF20381BC8008DC98A /* ButtonViewController.swift */,
 			);
 			path = Controllers;
@@ -254,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846043EA20381699008DC98A /* Player.swift in Sources */,
-				662EBF432037FE29007B4CD2 /* MainViewController.swift in Sources */,
+				662EBF432037FE29007B4CD2 /* CardViewController.swift in Sources */,
 				846043EC203819C9008DC98A /* CardsCollectionViewLayout.swift in Sources */,
 				846043E82038166F008DC98A /* Quote.swift in Sources */,
 				846043F020381BC8008DC98A /* ButtonViewController.swift in Sources */,
@@ -399,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 928WARTLH8;
 				INFOPLIST_FILE = SpeakMarvel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.SpeakMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 928WARTLH8;
 				INFOPLIST_FILE = SpeakMarvel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = meera.SpeakMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";

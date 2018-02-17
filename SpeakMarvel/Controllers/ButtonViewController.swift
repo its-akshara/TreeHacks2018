@@ -10,10 +10,8 @@ import Foundation
 import UIKit
 
 class ButtonViewController: UIViewController {
-    
-
     @IBAction func spiderButton(_ sender: Any) {
-        print("clicked")
+        performSegue(withIdentifier: "toCardViewController", sender: nil)
     }
     
     

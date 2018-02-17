@@ -9,7 +9,8 @@
 import UIKit
 import CardsLayout
 
-class MainViewController: UIViewController, UICollectionViewDelegate {
+class CardViewController: UIViewController, UICollectionViewDelegate {
+    
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -38,11 +39,11 @@ var colors: [UIColor] = [
 ]
 
 // CONFORM. TO. THE PROTOCOL!
-extension MainViewController: UICollectionViewDataSource {
+extension CardViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // Tell the collection view how MANY cards to show
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return 1
     }
     
     
@@ -51,9 +52,17 @@ extension MainViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellReuseIdentifier", for: indexPath)
         cell.layer.cornerRadius = 7.0
         cell.backgroundColor = colors[indexPath.row]
+        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = collectionView.bounds.width
+        let itemHeight = collectionView.bounds.height
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
 }
+
 
 // because we clean like dis
 extension UIColor {
@@ -64,5 +73,6 @@ extension UIColor {
                   alpha: 1.0)
     }
 }
+
 
 
