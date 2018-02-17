@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import HoundifySDK
+
 class CardsViewController: UIViewController {
 
     @IBOutlet weak var displayQuote: UILabel!
