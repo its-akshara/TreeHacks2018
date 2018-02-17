@@ -1,1 +1,1 @@
-Meera and Akshara are making a thing. Hopefullly
+4 people working on the Marvel API and the Houndify API. 
