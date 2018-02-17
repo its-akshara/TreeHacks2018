@@ -103,15 +103,12 @@
                     <view key="view" contentMode="scaleToFill" id="n0P-nl-ZWw" customClass="SwipeView" customModule="KSSwipeStack">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-=======
         <!--Cards View Controller-->
         <scene sceneID="6rx-gM-qj2">
             <objects>
-=======
         <!--Cards View Controller-->
         <scene sceneID="6rx-gM-qj2">
             <objects>
->>>>>>> 36fa61a0ff66052f469b6928d60df70f61deb8af
                 <viewController id="VsQ-hc-aFg" customClass="CardsViewController" customModule="SpeakMarvel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bi-2o-X6K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -129,20 +126,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
->>>>>>> 36fa61a0ff66052f469b6928d60df70f61deb8af
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JXx-b2-eq7"/>
                     </view>
                     <connections>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <outlet property="swipeView" destination="n0P-nl-ZWw" id="gNR-Dq-xvI"/>
-=======
                         <outlet property="displayQuote" destination="6mq-pY-cmX" id="E1U-E1-ycg"/>
->>>>>>> 36fa61a0ff66052f469b6928d60df70f61deb8af
-=======
                         <outlet property="displayQuote" destination="6mq-pY-cmX" id="E1U-E1-ycg"/>
->>>>>>> 36fa61a0ff66052f469b6928d60df70f61deb8af
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kx-QU-gM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
