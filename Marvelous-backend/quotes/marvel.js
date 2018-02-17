@@ -27,7 +27,10 @@ var getCharacterInfo = function(character_id) {
 var getInfoByName = function (name) {
   return marvel.characters.findByName(name)
   .then((res) => getCharacterInfo(res.data[0].id))
-  .fail(console.error);
+  .fail(function (res) {
+    console.log("Error!")
+    console.error(JSON.stringify(res))
+  });
 }
 
 var getAssociatedCharacters = function(character_id) {
@@ -40,8 +43,11 @@ var getAssociatedCharacters = function(character_id) {
     });
     character_list = [].concat.apply([], character_list)
 
-    return new Set(character_list)
+    return Promise.all(Array.from(new Set(character_list))
+      .map((c) => getInfoByName(c))
+    );
   })
+  .then()
   .fail(console.error); 
 }
 
