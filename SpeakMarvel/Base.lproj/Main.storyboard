@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Button View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeakMarvel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ButtonViewController" customModule="SpeakMarvel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,10 +43,6 @@
                                     <constraint firstAttribute="width" constant="133" id="RfH-6W-Niz"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-hB-E1K">
-                                <rect key="frame" x="204" y="52" width="133" height="135"/>
-                                <state key="normal" image="spiderButton"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v06-v0-LPC">
                                 <rect key="frame" x="166" y="580" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,6 +50,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-hB-E1K">
+                                <rect key="frame" x="204" y="52" width="133" height="135"/>
+                                <state key="normal" image="spiderButton"/>
+                                <connections>
+                                    <action selector="spiderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cIG-b5-tkC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,11 +88,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="VsQ-hc-aFg" kind="presentation" identifier="toCardViewController" id="nvU-6T-KNi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
+            <point key="canvasLocation" x="174" y="115"/>
         </scene>
+        <!--Card View Controller-->
+        <scene sceneID="6rx-gM-qj2">
+            <objects>
+                <viewController id="VsQ-hc-aFg" customClass="CardViewController" customModule="SpeakMarvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n0P-nl-ZWw" customClass="SwipeView" customModule="KSSwipeStack">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <!--Cards View Controller-->
+        <scene sceneID="6rx-gM-qj2">
+            <objects>
         <!--Cards View Controller-->
         <scene sceneID="6rx-gM-qj2">
             <objects>
@@ -111,9 +127,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3lt-Mo-ctj"/>
+                        <viewLayoutGuide key="safeArea" id="JXx-b2-eq7"/>
                     </view>
                     <connections>
+                        <outlet property="swipeView" destination="n0P-nl-ZWw" id="gNR-Dq-xvI"/>
+                        <outlet property="displayQuote" destination="6mq-pY-cmX" id="E1U-E1-ycg"/>
                         <outlet property="displayQuote" destination="6mq-pY-cmX" id="E1U-E1-ycg"/>
                     </connections>
                 </viewController>
