@@ -4,9 +4,16 @@ var api = require('marvel-api');
 
 const spiderman = require('./spider-man')
 
+// Sanchit's
+// var marvel = api.createClient({
+//   publicKey: 'c85fb470f52c2f0fadc9cf7b2383414d',
+//   privateKey: 'da0da9c53718269ad9056277e226a9937c0c23e9'
+// });
+
+// Akshara's
 var marvel = api.createClient({
-  publicKey: 'c85fb470f52c2f0fadc9cf7b2383414d',
-  privateKey: 'da0da9c53718269ad9056277e226a9937c0c23e9'
+  publicKey: 'f68effcfe068983ac93f8656d2057325',
+  privateKey: 'b8634a3ed60207dab363b842b7cc9ed9491b1df9'
 });
 
 var getCharacterInfo = function(character_id) {
@@ -33,7 +40,7 @@ var getInfoByName = function (name) {
   });
 }
 
-var getAssociatedCharacters = function(character_id) {
+var getAssociatedCharacters = function(character_id, limit) {
   return marvel.characters.events(character_id, 5)
   .then(function(res) {
     var character_list = res.data.map(function (event) {
@@ -43,7 +50,7 @@ var getAssociatedCharacters = function(character_id) {
     });
     character_list = [].concat.apply([], character_list)
 
-    return Promise.all(Array.from(new Set(character_list))
+    return Promise.all(Array.from(new Set(character_list)).slice(0, limit)
       .map((c) => getInfoByName(c))
     );
   })
@@ -58,7 +65,7 @@ var name = 'spider-man'
 // getCharacterInfo(character_id).then(console.log)
 // getInfoByName(name).then(console.log)
 
-getAssociatedCharacters(character_id).then(console.log)
+// getAssociatedCharacters(character_id).then(console.log)
 
 
 // export

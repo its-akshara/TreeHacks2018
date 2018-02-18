@@ -22,8 +22,10 @@
     "e2e-test": "samples test deploy"
   },
   "dependencies": {
+    "comicvine-client": "^0.1.2",
     "express": "4.15.4",
-    "marvel-api": "^1.1.0"
+    "marvel-api": "^1.1.0",
+    "node-wikia": "0.0.3"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "1.4.17"

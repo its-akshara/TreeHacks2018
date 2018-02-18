@@ -1,17 +1,22 @@
+var getInfos = require('./marvel').getAssociatedCharacters
+
+'use strict';
+
 // Quote object definition
 
 class Quote {
-  constructor(quote, character='', image='') {
-    this._quote = quote;
-    this._character = character;
+  constructor(name='', image='', characterId = null) {
+    // this._quote = quote;
+    this._name = name;
     this._image = image;
+    this._characterId = characterId;
   }
 
   objectRep() {
     return {
-      quote: this._quote,
-      character: this._character,
-      image: this._image
+      name: this._name,
+      image: this._image,
+      characterId :this._characterId
     }
   }
 
@@ -20,5 +25,32 @@ class Quote {
   }
 }
 
+var getQuotes = function (character_id, limit) {
+  return (getInfos(character_id, limit)
+  .then(function (res) {
+    return res.map(function (c) {
+      return {
+        image: c.image,
+        name: c.name,
+        characterId: c.id.toString()
+      }
+    });
+  }));
+}
+
+// Main
+var character_id = '1009610'
+var limit = 10
+// getInfos(character_id, limit).then(function(res) {
+//   console.log(JSON.stringify(res))
+// });
+
+// getQuotes(character_id, limit).then(function(res) {
+//   console.log(res)
+// });
+
+module.exports = {
+  getQuotes: getInfos
+}
 
 

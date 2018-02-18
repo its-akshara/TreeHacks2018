@@ -17,6 +17,7 @@
 
 // [START app]
 const express = require('express');
+var getQuotes = require('./quotes/quote').getQuotes
 
 const app = express();
 
@@ -29,9 +30,15 @@ var testResponse = {
   character: "Tony Stark",
   image: "https://nerdist.com/wp-content/uploads/2016/04/Iron-Man.jpg"
 }
+var character_id = '1009610'
+// getQuotes(character_id, 10).then(function(res) {
+//   console.log(JSON.stringify(res))
+// });
 
 app.get('/cards', (req, res) => {
-  res.status(200).send(testResponse).end();
+  getQuotes(req.query.characterId, req.query.limit).then(function (quoteList) {
+    res.status(200).send(quoteList).end();
+  });
 });
 
 // Start the server
