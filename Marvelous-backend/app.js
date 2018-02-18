@@ -36,7 +36,7 @@ var character_id = '1009610'
 // });
 
 app.get('/cards', (req, res) => {
-  getQuotes(req.query.characterId, req.query.limit).then(function (quoteList) {
+  getQuotes(parseInt(req.query.characterId), req.query.limit).then(function (quoteList) {
     res.status(200).send(quoteList).end();
   });
 });

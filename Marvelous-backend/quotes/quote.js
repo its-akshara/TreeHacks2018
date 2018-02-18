@@ -1,4 +1,5 @@
-var getInfos = require('./marvel').getAssociatedCharacters
+var getInfos = require('./marvel').getAssociatedCharacters;
+var quoteDB = require('./quoteDB');
 
 'use strict';
 
@@ -28,29 +29,31 @@ class Quote {
 var getQuotes = function (character_id, limit) {
   return (getInfos(character_id, limit)
   .then(function (res) {
-    return res.map(function (c) {
+    return res.filter((c) => c.name in quoteDB).map(function (c) {
       return {
         image: c.image,
         name: c.name,
-        characterId: c.id.toString()
+        characterId: c.id.toString(),
+        detailUrl: c.urls,
+        quote: quoteDB[c.name]
       }
     });
   }));
 }
 
 // Main
-var character_id = '1009610'
-var limit = 10
+var character_id = '1009610';
+var limit = 20;
 // getInfos(character_id, limit).then(function(res) {
 //   console.log(JSON.stringify(res))
 // });
 
 // getQuotes(character_id, limit).then(function(res) {
-//   console.log(res)
+//   console.log(JSON.stringify(res))
 // });
 
 module.exports = {
-  getQuotes: getInfos
+  getQuotes: getQuotes
 }
 
 

@@ -1,6 +1,9 @@
 // Marvel API handler
 'use strict';
 var api = require('marvel-api');
+var cheerio = require('cheerio');
+var rp = require('request-promise');
+
 
 const spiderman = require('./spider-man')
 
@@ -22,26 +25,31 @@ var getCharacterInfo = function(character_id) {
     var thumbnail = res.data[0].thumbnail
     var imageUrl = thumbnail.path + '.' + thumbnail.extension;
     // Call .then on
+    var url = res.data[0].urls.filter((u) => u.type == 'detail')[0].url
+     
     return {
-      id: res.data[0].id,
-      image: imageUrl,
-      name: res.data[0].name
-    }
+        id: res.data[0].id,
+        image: imageUrl,
+        name: res.data[0].name,
+        url: url
+      }
   })
-  .fail(console.error);
+  .fail(function (err) {
+    console.error(JSON.stringify(err))
+  });
 };
 
 var getInfoByName = function (name) {
   return marvel.characters.findByName(name)
   .then((res) => getCharacterInfo(res.data[0].id))
   .fail(function (res) {
-    console.log("Error!")
+    // console.log("Error!")
     console.error(JSON.stringify(res))
   });
 }
 
 var getAssociatedCharacters = function(character_id, limit) {
-  return marvel.characters.events(character_id, 5)
+  return marvel.characters.comics(character_id, limit)
   .then(function(res) {
     var character_list = res.data.map(function (event) {
       return event.characters.items.map(function(character) {
@@ -54,18 +62,21 @@ var getAssociatedCharacters = function(character_id, limit) {
       .map((c) => getInfoByName(c))
     );
   })
-  .then()
-  .fail(console.error); 
-}
+  .fail(function (err) {
+    console.error('Failure: ', err)
+  }); 
+};
 
 
 // Main
-var character_id = '1009610'
-var name = 'spider-man'
+var character_id = '1009610';
+var name = 'spider-man';
 // getCharacterInfo(character_id).then(console.log)
 // getInfoByName(name).then(console.log)
 
-// getAssociatedCharacters(character_id).then(console.log)
+// getAssociatedCharacters(character_id, 20).then(function (res) {
+//   console.log(JSON.stringify(res));
+// });
 
 
 // export
