@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import HoundifySDK
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Hound.setClientID("eurTaAimVKhbzsPFDkgQHQ==");
-    Hound.setClientKey("gh0kgu5QvU87tfL7WP3J0kFT5UPeTyzcQ479tRMKKVaaDMXZuiHdylngx6CdkgBXmwSNrJu2j6LH6EZv8uEkNw==");
         return true
     }
 

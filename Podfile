@@ -16,7 +16,6 @@ target 'SpeakMarvel' do
   pod 'Alamofire'
   pod 'Moya'
   pod 'SwiftyJSON'
-  pod 'HoundifySDK'
 
 end
 
